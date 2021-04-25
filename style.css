@@ -1,0 +1,12 @@
+/* try to css to html, but not working */
+.navbar {
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size: 16px;
+background-color: blue;
+font-weight: 500;
+}
+.genre {
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+font-size: 16px;
+background-color: gray;
+}
