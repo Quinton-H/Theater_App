@@ -11,37 +11,76 @@
     <title>Theater App</title>
 </head>
 
-<body>
-    <!--https://validator.w3.org/ to check html code 
-    https://eslint.org/ formatting code to a set of rules-->
-    <!--Make a header called Theater App name and a nav bar with different options user can click-->
-    <header>
-        <h1>Theater App</h1>
-        <nav class="navbar">
-            <ul>
-                <li><a href="#tickets">Tickets</a></li>
-                <li><a href="#trending">Trending</a></li>
-                <li><a href="#new">New/Latest</a></li>
-                <li><a href="#genre">Genre</a></li>
-                <li class="list">
-                    <ul>
-                        <li><a href="#action">Action</a></li>
-                        <li><a href="#comedy">Comedy</a></li>
-                        <li><a href="#thriller">Thriller</a></li>
-                        <li><a href="horror">Horror</a></li>
-                        <li><a href="LGBTQ">LGBTQ</a></li>
-                        <li><a href="#romance">Romance</a></li>
-                        <li><a href="#drama">Drama</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section></section>
-    </main>
-    <footer>
 
+<body>
+    <!--Make a header called Theater App name and a nav bar with different options user can click-->
+    <div class="main-wrapper">
+        <header>
+            <h1>Theater App</h1>
+            <nav class="navbar">
+                <ul>
+                    <!--Make 'browse movies' a drop down-->
+                    <li class="navbarlist"><a href="browse.html"></a>Browse Movies</li>
+                    <!--Make 'get tickets' a drop down-->
+                    <li class="navbarlist">Get tickets</li>
+                        <li class="navbar_dropdown_content">
+                            <ul>
+                                <li>discounts</li>
+                                <li>availability</li>
+                                <li>packages</li>
+                            </ul>
+                        </li>
+                    <!--Make 'food&bev' a drop down-->
+                    <li class="navbarlist">Food & Bev</li>
+                        <li class="navbar_dropdown_content">
+                            <ul>
+                                <li>best</li>
+                                <li>combos</li>
+                            </ul>
+                        </li>
+                    <li class="navbarlist">Location</li>
+                    <li class="navbarlist">Behind the Scenes</li>
+                    <li class="navbarlist">Login</li>
+                </ul>
+            </nav>
+        </header>
+<div class="main-content">
+    <main>
+        <!-- Image slider using js -->
+        <div class="img-slider"></div>
+        <!-- Browse currently playing button under the image slider -->
+        <button class="playing">Now Playing</button>
+        <!-- Infinite scrolling list of movies -->
+        <div id="featured-list"></div>
+        <!--upcoming movies with infinite scroll, little movies-->
+        <h2>Coming soon</h2>
+        <h2>Trending</h2>
+    <div class="row">
+        <!-- The members section detailing member rewards-->
+        <div class="members-sec">
+            <h3>Members Section</h3>
+                <ul class="move-over">
+                    <li>Discounted prices</li>
+                    <li>First pick seating</li>
+                    <li>Vip food selection</li>
+                    <li>Premier events</li>
+                </ul>
+            <button>Sign Up</button>
+        </div>
+        <!-- <hr> -->
+        <!-- The events section of the page detailing events going on -->
+        <div class="events">
+            <h3>Events Going on:</h3>
+            <p>National Free Popcorn Day</p>
+            <p>Bring a friend to the movies</p>
+            <p>Donate to a charity</p>
+            <button>Learn More</button>
+        </div>
+    </div>
+    </main>
+</div>
+    <footer>
+        <ul></ul>
     </footer>
 </body>
 
