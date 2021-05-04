@@ -4,7 +4,6 @@
     box-sizing: border-box;
     background-color: #151515;
 }
-
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #d3d3d3;
@@ -16,6 +15,7 @@ body {
 header h1 {
     font-size: 1em;
     color: #d3d3d3;
+    top: 0;
 }
 
 input.searchbar {
@@ -29,21 +29,22 @@ input.searchbar {
 
 .navbar {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     align-content: center;
     background-color: #090909;
-    font-size: 0.3em;
+    font-size: 0.9em;
     color: #d3d3d3;
     position: absolute;
     width: 100%;
     padding: 10px;
+
 }
 
 .navbarlist {
     flex: 1;
 
     list-style-type: none;
-    display: flex;
+    display: inline;
     background-color: #090909;
     color: #d3d3d3;
 }
