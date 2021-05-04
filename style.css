@@ -1,8 +1,3 @@
-
-
-/**
-// General Styles
-**/
 * {
     margin: 0;
     padding: 0;
@@ -15,27 +10,17 @@ body {
     color: #d3d3d3;
 }
 
-h2 {
-    font-size: 1em;
-}
-
-
-button {
-    color: inherit;
-}
-
-.main-content {
-   margin-top: 50px;
-}
-
 /**
 // Header Styles
 **/
-
-
 header h1 {
     font-size: 1em;
     color: #d3d3d3;
+}
+
+input.searchbar {
+    background-color: #f7f7f7;
+    flex: 1;
 }
 
 /**
@@ -43,73 +28,23 @@ header h1 {
 **/
 
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
     background-color: #090909;
+    font-size: 0.3em;
     color: #d3d3d3;
     position: absolute;
     width: 100%;
     padding: 10px;
 }
 
-.navbar_dropdown_content {
-    position: absolute;
-    display: none;
-    background-color: black;
-    // color: #d3d3d3;
-    text-decoration: none;
-}
-
 .navbarlist {
+    flex: 1;
+
     list-style-type: none;
-    display: inline;
+    display: flex;
     background-color: #090909;
     color: #d3d3d3;
 }
-
-/** #trending, #comingsoon, #action, #comedy, #thriller, #horror, #romance {
-
-}
-**/
-
-/**
-// Utility Styles?
-**/
-
-.row {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.members-sec {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid white;
-    height: 200px;
-    max-width: 500px;
-}
-
-.events {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    border: 1px solid white;
-    height: 200px;
-    max-width: 500px;
-}
-
-.main-wrapper {
-    width: 90%;
-    margin: 0 auto;
-}
-
-.move-over {
-    margin-left: 40px;
-}
-
-// .hidden {
-//     display: none;
-// }
 
