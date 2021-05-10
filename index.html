@@ -1,0 +1,102 @@
+<!DOCUTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="movies, theater, film, theatre">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+    <title>Theater App</title>
+</head>
+
+
+<body>
+    <!--Make a header called Theater App name and a nav bar with different options user can click-->
+    <div class="main-wrapper">
+        <header>
+            <h1>Theater App</h1>
+            <nav class="navbar">
+                <ul>
+                    <!--Make 'browse movies' a drop down-->
+                    <li class="navbarlist"><a href="browse.html"></a>Browse Movies</li>
+                    <!--Make 'get tickets' a drop down-->
+                    <li class="navbarlist">Get tickets</li>
+                        <li class="navbar_dropdown_content">
+                            <ul>
+                                <li>discounts</li>
+                                <li>availability</li>
+                                <li>packages</li>
+                            </ul>
+                        </li>
+                    <!--Make 'food&bev' a drop down-->
+                    <li class="navbarlist">Food & Bev</li>
+                        <li class="navbar_dropdown_content">
+                            <ul>
+                                <li>best</li>
+                                <li>combos</li>
+                            </ul>
+                        </li>
+                    <li class="navbarlist">Location</li>
+                    <li class="navbarlist">Behind the Scenes</li>
+                    <li class="navbarlist">Login</li>
+                </ul>
+            </nav>
+        </header>
+<div class="main-content">
+    <main>
+        <!-- Image slider using js -->
+        <div class="img-slider">
+          <img class="images" src="https://www.comingsoon.net/assets/uploads/gallery/mortal-kombat/mortal-kombat-poster.jpg" alt="mortal kombat poster">
+        </div>
+        <!-- Browse currently playing button under the image slider -->
+        <button class="playing">Now Playing</button>
+        <!-- Infinite scrolling list of movies -->
+        <div id="featured-list"></div>
+        <!--upcoming movies with infinite scroll, little movies-->
+        <h2>Coming soon</h2>
+        <h2>Trending</h2>
+    <div class="row">
+        <!-- <hr> -->
+        <!-- The events section of the page detailing events going on -->
+        <div class="events">
+            <img class="event-image" src="https://www1.chester.ac.uk/sites/default/files/styles/hero/public/Events%20Management%20festival%20image.jpg?itok=eJ3k-5R6">
+            <h1>Events Going on:</h1>
+            <p>National Free Popcorn Day</p>
+            <span>8/24/2021</span>
+          <br>
+            <p>Bring a friend to the movies</p>
+            <span>7/4/2021</span>
+          <br>
+            <p>Donate to a charity</p>
+            <span>6/18/2021</span>
+          <br>
+            <button class="event-button">Learn More</button>
+        </div>
+    </div>
+    </main>
+</div>
+    <hr>
+    <footer class="bottom">
+      <div class="footer-column">
+        <ul class="no-dot">
+          <li><a href="#">Back to the top</a></li>
+          <li><a href="#">Job Oppurtunities</a></li>
+          <li><a href="#">Contact US</a></li>
+        </ul>
+      </div>
+      <div class="footer-column">
+      <p>© CopyRight 2021</p>
+      </div>
+      <div class="footer-column">
+        <p>Social Media</p>
+        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"></a></span>
+        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-512.png"></a></span>
+        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png"></a></span>
+        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png"></a></span>
+      </div>
+    </footer>
+</body>
+
+</html>
