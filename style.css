@@ -13,14 +13,20 @@ body {
 // Header Styles
 **/
 header h1 {
-    font-size: 1em;
+    font-size: 1.2em;
     color: #d3d3d3;
-    top: 0;
+    top: 5;
+    left: 0;
+    /* position: absolute; */
 }
 
 input.searchbar {
     background-color: #f7f7f7;
-    flex: 1;
+    position: absolute;
+    top: 2px;
+    right: 0;
+    /* display: flex;
+    flex- */
 }
 
 /**
@@ -29,15 +35,16 @@ input.searchbar {
 
 .navbar {
     display: flex;
-    justify-content: space-evenly;
-    align-content: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: flex-start;
     background-color: #090909;
-    font-size: 0.9em;
+    font-size: 0.9rem;
     color: #d3d3d3;
     position: absolute;
     width: 100%;
     padding: 10px;
-
+    border: hotpink 3px solid;
 }
 
 .navbarlist {
