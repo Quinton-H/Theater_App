@@ -19,16 +19,20 @@ header h1 {
     color: #d3d3d3;
     top: 5;
     left: 0;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em
     /* position: absolute; */
 }
 
 input.searchbar {
     background-color: #f7f7f7;
     position: absolute;
-    top: 2px;
+    top: 7px;
     right: 0;
-    /* display: flex;
-    flex- */
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    display: flex;
+    align-items: center;
 }
 
 /**
