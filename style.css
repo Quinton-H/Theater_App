@@ -4,6 +4,7 @@
     box-sizing: border-box;
     background-color: #151515;
 }
+
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: #d3d3d3;
@@ -12,6 +13,7 @@ body {
 /**
 // Header Styles
 **/
+
 header h1 {
     font-size: 1.2em;
     color: #d3d3d3;
@@ -44,15 +46,19 @@ input.searchbar {
     position: absolute;
     width: 100%;
     padding: 10px;
-    border: hotpink 3px solid;
 }
 
 .navbarlist {
-    flex: 1;
-
-    list-style-type: none;
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     background-color: #090909;
     color: #d3d3d3;
+    font-size: 0.8rem;
+}
+
+.material-icons {
+    background-color: #090909;
+    font-size:;
 }
 
