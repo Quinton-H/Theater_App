@@ -1,0 +1,28 @@
+{
+  "name": "Theater_App",
+  "version": "1.0.0",
+  "description": "Building a app that lets you see what movies are available and which seats are open",
+  "main": "index.js",
+  "scripts": {
+    "watch:sass": "node-sass sass/main.scss style.css -w",
+    "compile:sass": "node-sass sass/main.scss style.css",
+    "dev": "live-server",
+		"start": "concurrently \"npm:dev\" \"npm:watch:sass\""
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Prosperos-Masq/Theater_App.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Prosperos-Masq/Theater_App/issues"
+  },
+  "homepage": "https://github.com/Prosperos-Masq/Theater_App#readme",
+  "devDependencies": {
+    "concurrently": "^6.1.0",
+    "node-sass": "^6.0.0"
+  }
+}
