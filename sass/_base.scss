@@ -1,16 +1,25 @@
 /**
 // General Styles
 **/
-* {
+
+:root {
+	--dark-bg: #151515;
+}
+*,
+*::before,
+*::after {
 	margin: 0;
 	padding: 0;
-	box-sizing: border-box;
-	background-color: #151515;
+	box-sizing: inherit;
 }
 
+html {
+	box-sizing: border-box;
+}
 body {
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 	color: #d3d3d3;
+	background-color: var(--dark-bg);
 }
 
 h2 {

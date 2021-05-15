@@ -1,0 +1,95 @@
+///////////////////////////////
+// MOVIE LIST
+.movie-list {
+	background-color: #e8eaf6;
+	overflow-x: auto;
+	box-sizing: border-box;
+	// padding: 1em;
+
+	background-color: greenyellow;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+
+	// Dim all the non hovered elements
+	&__scroll-horizontal {
+		list-style: none;
+		padding: 0;
+		margin: 0.5rem;
+		background-color: red;
+
+		min-width: 100%;
+		display: flex;
+		flex-wrap: nowrap;
+	}
+}
+
+///////////////////////////////
+// MOVIE
+.movie {
+	--gap: 0.5rem;
+	flex: 0 0 calc((100% - 2 * var(--gap)) / 3);
+
+	position: relative;
+	z-index: 1;
+	transition: all 0.3s;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	background: rgb(56, 19, 92);
+
+	// background-color: orangered;
+
+	&:not(:last-child) {
+		margin-right: var((--gap));
+	}
+
+	// &--active,
+	// &:hover {
+	// 	transform: scale(1.1) translateY(-0.5rem);
+	// 	z-index: 999;
+	// 	opacity: 1;
+	// }
+
+	&__poster {
+		width: 100%;
+	}
+
+	&__details {
+		text-align: center;
+		font-size: 0.625rem;
+		padding: 0.25em 0.75em;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		align-content: center;
+		// flex-direction: column;
+	}
+
+	&__title {
+		font-size: 0.6875rem;
+		flex: 0 0 100%;
+
+		& ~ * {
+			color: #949292;
+		}
+	}
+	&__rating {
+		flex: 1;
+		font-weight: 800;
+	}
+
+	&__duration {
+		flex: 5 1;
+	}
+
+	&__release-date {
+		flex: 0 0 100%;
+	}
+}
