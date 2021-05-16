@@ -50,7 +50,7 @@ header h1 {
 .navbar {
 	background-color: #090909;
 	color: #d3d3d3;
-	position: absolute;
+	// position: absolute;
 	width: 100%;
 	padding: 10px;
 }
@@ -107,6 +107,7 @@ header h1 {
 
 .main-wrapper {
 	width: 90%;
+	max-width: 90rem;
 	margin: 0 auto;
 }
 

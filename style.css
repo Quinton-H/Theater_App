@@ -41,7 +41,6 @@ header h1 {
 .navbar {
   background-color: #090909;
   color: #d3d3d3;
-  position: absolute;
   width: 100%;
   padding: 10px; }
 
@@ -89,68 +88,66 @@ header h1 {
 
 .main-wrapper {
   width: 90%;
+  max-width: 90rem;
   margin: 0 auto; }
 
 .move-over {
   margin-left: 40px; }
 
-.movie-list {
-  background-color: #e8eaf6;
+.movie-list-wrapper {
   overflow-x: auto;
-  box-sizing: border-box;
-  background-color: greenyellow;
+  overflow-y: hidden;
   display: flex;
-  justify-content: center;
+  min-width: 100%;
+  padding: 1em 0.5em; }
+
+.movie-list {
+  display: flex;
+  flex: 1;
   align-items: center;
-  width: 100%; }
-  .movie-list__scroll-horizontal {
-    list-style: none;
-    padding: 0;
-    margin: 0.5rem;
-    background-color: red;
-    min-width: 100%;
-    display: flex;
-    flex-wrap: nowrap; }
+  justify-content: center;
+  flex-wrap: nowrap; }
 
 .movie {
   --gap: 0.5rem;
-  flex: 0 0 calc((100% - 2 * var(--gap)) / 3);
-  position: relative;
-  z-index: 1;
-  transition: all 0.3s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background: #38135c; }
+  width: 100%;
+  min-width: 6.875rem;
+  max-width: 11.26rem;
+  opacity: 0.675;
+  transition: all 0.375s ease; }
   .movie:not(:last-child) {
     margin-right: var(--gap); }
+  .movie:hover {
+    transform: scale(1.08);
+    cursor: pointer;
+    opacity: 1; }
   .movie__poster {
-    width: 100%; }
+    max-width: 100%;
+    object-fit: cover; }
   .movie__details {
     text-align: center;
-    font-size: 0.625rem;
-    padding: 0.25em 0.75em;
+    font-size: 0.6875rem;
+    color: #848598;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    align-content: center; }
+    align-items: center; }
   .movie__title {
-    font-size: 0.6875rem;
-    flex: 0 0 100%; }
-    .movie__title ~ * {
-      color: #949292; }
+    color: #dcdce5;
+    flex: 0 0 100%;
+    font-weight: 700;
+    font-size: 0.75rem; }
   .movie__rating {
-    flex: 1;
-    font-weight: 800; }
+    font-weight: 900;
+    margin-right: 0.5em; }
   .movie__duration {
-    flex: 5 1; }
+    flex: 1; }
   .movie__release-date {
     flex: 0 0 100%; }
 
 .section {
-  padding: 1rem 0; }
+  padding: 1em 0;
+  margin: 0.5em 0; }
   .section .heading-section {
     font-size: 1.5rem;
     font-weight: 400;
