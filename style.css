@@ -88,7 +88,10 @@ header h1 {
 .images {
   display: flex;
   justify-content: center;
+  width: 85%;
   height: auto;
+  margin-left: auto;
+  margin-right: auto;
   min-width: 320px;
 }
 
