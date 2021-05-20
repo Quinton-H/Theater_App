@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-/*   box-sizing: border-box; */
+  box-sizing: border-box;
 /*   background-color: #151515;  Gives everything a black background including text */
 }
 
@@ -93,7 +93,7 @@ header h1 {
 }
 
 .event-image {
-  width: 100%;
+  max-width: 600px;
   max-height: 450px;
 }
 
@@ -106,8 +106,16 @@ header h1 {
   background-position: center;
   color: white;
   font-size: 1em;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   width: 85%;
+}
+
+.event-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .event-button {
@@ -160,5 +168,9 @@ a:hover {
 @media screen and (max-width: 413px){
   .events h1 {
     font-size: 1.2em;
+  }
+
+  .event-image {
+    width: 100%;
   }
 }
