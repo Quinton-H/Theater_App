@@ -1,40 +1,38 @@
-/**
-// General Styles
-**/
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-/*   background-color: #151515;  Gives everything a black background including text */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #151515;
 }
 
 body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  color: #d3d3d3;
-  background-color: #151515;
-}
-
-h2 {
-  font-size: 1em;
-}
-
-
-button {
-  color: inherit;
-}
-
-.main-content {
-  margin-top: 50px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #d3d3d3;
 }
 
 /**
 // Header Styles
 **/
 
-
 header h1 {
-  font-size: 1em;
-  color: #d3d3d3;
+    font-size: 1.2em;
+    color: #d3d3d3;
+    top: 5;
+    left: 0;
+    padding-bottom: 0.5em;
+    padding-top: 0.5em
+    /* position: absolute; */
+}
+
+input.searchbar {
+    background-color: #f7f7f7;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    display: flex;
+    align-items: center;
 }
 
 /**
@@ -42,26 +40,30 @@ header h1 {
 **/
 
 .navbar {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: flex-start;
   background-color: #090909;
+  font-size: 0.9rem;
   color: #d3d3d3;
   position: absolute;
   width: 100%;
   padding: 10px;
 }
 
-.navbar_dropdown_content {
-  position: absolute;
-  display: none;
-  background-color: black;
-  /* // color: #d3d3d3; */
-  text-decoration: none;
-}
-
 .navbarlist {
-  list-style-type: none;
-  display: inline;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background-color: #090909;
   color: #d3d3d3;
+  font-size: 0.8rem;
+}
+
+.material-icons {
+  background-color: #090909;
+  font-size:;
 }
 
 /** #trending, #comingsoon, #action, #comedy, #thriller, #horror, #romance {

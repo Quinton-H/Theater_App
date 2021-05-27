@@ -1,49 +1,40 @@
-<!DOCUTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-
+</html>
+<body>
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="keywords" content="movies, theater, film, theatre">
     <link rel="stylesheet" href="style.css">
-    <link rel="icon" type="image/png" href="http://example.com/myicon.png">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
     <title>Theater App</title>
 </head>
-
-
-<body>
-    <!--Make a header called Theater App name and a nav bar with different options user can click-->
-    <div class="main-wrapper">
-        <header>
-            <h1>Theater App</h1>
-            <nav class="navbar">
-                <ul>
-                    <!--Make 'browse movies' a drop down-->
-                    <li class="navbarlist"><a href="browse.html"></a>Browse Movies</li>
-                    <!--Make 'get tickets' a drop down-->
-                    <li class="navbarlist">Get tickets</li>
-                        <li class="navbar_dropdown_content">
-                            <ul>
-                                <li>discounts</li>
-                                <li>availability</li>
-                                <li>packages</li>
-                            </ul>
-                        </li>
-                    <!--Make 'food&bev' a drop down-->
-                    <li class="navbarlist">Food & Bev</li>
-                        <li class="navbar_dropdown_content">
-                            <ul>
-                                <li>best</li>
-                                <li>combos</li>
-                            </ul>
-                        </li>
-                    <li class="navbarlist">Location</li>
-                    <li class="navbarlist">Behind the Scenes</li>
-                    <li class="navbarlist">Login</li>
-                </ul>
-            </nav>
-        </header>
+<!-- make header && searchbar -->
+<header class="header">
+    <h1>Theater Name</h1>
+    <form action="#">
+    <input class="searchbar" type="search" name="search" placeholder="Search...">
+    </form>
+<!-- make nav bar -->
+    <nav class="navbar">
+         <a class="navbarlist" href="#"><span class="material-icons">
+            home
+            </span>Home</a>
+         <a class="navbarlist" href="browse.html">
+             <span class="material-icons">
+                grade
+                </span>Browse Movies</a>
+         <a class="navbarlist" href="#"><span class="material-icons">
+            menu_book
+            </span>Food&amp;Bev</a>
+         <a class="navbarlist" href="#"><span class="material-icons">
+            person_outline
+            </span>Membership</a>
+    </nav>
+</header>
 <div class="main-content">
     <main>
         <!-- Image slider using js -->
