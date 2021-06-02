@@ -1,99 +1,370 @@
 <!DOCTYPE html>
 <html lang="en">
-</html>
-<body>
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="movies, theater, film, theatre">
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-      rel="stylesheet">
-    <title>Theater App</title>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="movies, theater, film, theatre">
+	<link rel="stylesheet" href="style.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<title>Theater App</title>
 </head>
-<!-- make header && searchbar -->
-<header class="header">
-    <h1>Theater Name</h1>
-    <form action="#">
-    <input class="searchbar" type="search" name="search" placeholder="Search...">
-    </form>
-<!-- make nav bar -->
-    <nav class="navbar">
-         <a class="navbarlist" href="#"><span class="material-icons">
-            home
-            </span>Home</a>
-         <a class="navbarlist" href="browse.html">
-             <span class="material-icons">
-                grade
-                </span>Browse Movies</a>
-         <a class="navbarlist" href="#"><span class="material-icons">
-            menu_book
-            </span>Food&amp;Bev</a>
-         <a class="navbarlist" href="#"><span class="material-icons">
-            person_outline
-            </span>Membership</a>
-    </nav>
-</header>
-<div class="main-content">
-    <main>
-        <!-- Image slider using js -->
-        <div class="img-slider">
-          <img class="images" src="https://www.comingsoon.net/assets/uploads/gallery/mortal-kombat/mortal-kombat-poster.jpg" alt="mortal kombat poster">
-        </div>
-        <!-- Browse currently playing button under the image slider -->
-        <button class="playing">Now Playing</button>
-        <!-- Infinite scrolling list of movies -->
-        <div id="featured-list"></div>
-        <!--upcoming movies with infinite scroll, little movies-->
-        <h2>Coming soon</h2>
-        <h2>Trending</h2>
-    <div class="row">
-        <!-- <hr> -->
-        <!-- The events section of the page detailing events going on -->
-        <div class="events">
-            <img class="event-image" src="https://www1.chester.ac.uk/sites/default/files/styles/hero/public/Events%20Management%20festival%20image.jpg?itok=eJ3k-5R6">
-            <div class="event-title">
-              <h1>Events Going on:</h1>
-              <p>National Free Popcorn Day</p>
-              <span>8/24/2021</span>
-            </div>
-      
-          <div class="event-title">
-            <p>Bring a friend to the movies</p>
-            <span>7/4/2021</span>
-          </div>
-          
-          <div class="event-title">
-            <p>Donate to a charity</p>
-            <span>6/18/2021</span>
-          </div>
-          
-            <button class="event-button">Learn More</button>
-        </div>
-    </div>
-    </main>
-</div>
-    <hr>
-    <footer class="bottom">
-      <div class="footer-column">
-        <ul class="no-dot">
-          <li><a href="#">Back to the top</a></li>
-          <li><a href="#">Job Oppurtunities</a></li>
-          <li><a href="#">Contact US</a></li>
-        </ul>
-      </div>
-      <div class="footer-column">
-      <p>© CopyRight 2021</p>
-      </div>
-      <div class="footer-column">
-        <p>Social Media</p>
-        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"></a></span>
-        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-512.png"></a></span>
-        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png"></a></span>
-        <span><a href="#"><img class="icon" src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png"></a></span>
-      </div>
-    </footer>
+
+<body>
+
+	<!-- make header && searchbar -->
+	<header class="header">
+		<h1>Theater Name</h1>
+		<form action="#">
+			<input class="searchbar" type="search" name="search" placeholder="Search...">
+		</form>
+		<!-- make nav bar -->
+		<nav class="navbar">
+			<a class="navbarlist" href="#"><span class="material-icons">
+					home
+				</span>Home</a>
+			<a class="navbarlist" href="browse.html">
+				<span class="material-icons">
+					grade
+				</span>Browse Movies</a>
+			<a class="navbarlist" href="#"><span class="material-icons">
+					menu_book
+				</span>Food&amp;Bev</a>
+			<a class="navbarlist" href="#"><span class="material-icons">
+					person_outline
+				</span>Membership</a>
+		</nav>
+	</header>
+	<div class="main-content">
+		<main>
+			<!-- Image slider using js -->
+			<div class="img-slider">
+				<img class="images"
+					src="https://www.comingsoon.net/assets/uploads/gallery/mortal-kombat/mortal-kombat-poster.jpg"
+					alt="mortal kombat poster">
+			</div>
+
+			<section class="section section-now-playing">
+				<h2 class="heading-section">Now Playing</h2>
+
+				<div class="horizontal-scroll horizontal-scroll--now-playing">
+					<div class="horizontal-scroll__scroll-wrapper">
+
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</section>
+
+			<section class="section section-coming-soon">
+				<h2 class="heading-section">Coming Soon</h2>
+
+
+				<div class="horizontal-scroll horizontal-scroll--coming-soon">
+					<div class=" horizontal-scroll__scroll-wrapper">
+
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+
+
+						<div class="horizontal-scroll__item">
+							<div class="movie">
+								<div class="movie__poster-container">
+									<img
+										src="https://m.media-amazon.com/images/M/MV5BY2ZlNWIxODMtN2YwZi00ZjNmLWIyN2UtZTFkYmZkNDQyNTAyXkEyXkFqcGdeQXVyODkzNTgxMDg@._V1_.jpg"
+										alt="" class="movie__poster">
+								</div>
+								<div class="movie__details">
+									<h4 class="movie__title">Mortal Kombat</h4>
+									<div class="movie__details-group">
+										<span class="movie__rating">R</span>
+										<span class="movie__duration">1hr 35min</span>
+									</div>
+									<span class="movie__release-date">23 April 2021</span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<div class="row">
+				<!-- <hr> -->
+				<!-- The events section of the page detailing events going on -->
+				<div class="events">
+					<img class="event-image"
+						src="https://www1.chester.ac.uk/sites/default/files/styles/hero/public/Events%20Management%20festival%20image.jpg?itok=eJ3k-5R6">
+					<div class="event-title">
+						<h1>Events Going on:</h1>
+						<p>National Free Popcorn Day</p>
+						<span>8/24/2021</span>
+					</div>
+
+					<div class="event-title">
+						<p>Bring a friend to the movies</p>
+						<span>7/4/2021</span>
+					</div>
+
+					<div class="event-title">
+						<p>Donate to a charity</p>
+						<span>6/18/2021</span>
+					</div>
+
+					<button class="event-button">Learn More</button>
+				</div>
+			</div>
+		</main>
+	</div>
+	<hr>
+	<footer class="bottom">
+		<div class="footer-column">
+			<ul class="no-dot">
+				<li><a href="#">Back to the top</a></li>
+				<li><a href="#">Job Oppurtunities</a></li>
+				<li><a href="#">Contact US</a></li>
+			</ul>
+		</div>
+		<div class="footer-column">
+			<p>© CopyRight 2021</p>
+		</div>
+		<div class="footer-column">
+			<p>Social Media</p>
+			<span><a href="#"><img class="icon"
+						src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Instagram_colored_svg_1-512.png"></a></span>
+			<span><a href="#"><img class="icon"
+						src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Twitter3_colored_svg-512.png"></a></span>
+			<span><a href="#"><img class="icon"
+						src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Linkedin_unofficial_colored_svg-512.png"></a></span>
+			<span><a href="#"><img class="icon"
+						src="https://cdn2.iconfinder.com/data/icons/social-media-2285/512/1_Youtube_colored_svg-512.png"></a></span>
+		</div>
+	</footer>
 </body>
 
 </html>

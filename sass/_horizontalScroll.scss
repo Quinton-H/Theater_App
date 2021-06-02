@@ -1,0 +1,29 @@
+.horizontal-scroll {
+	overflow: hidden;
+	overflow-x: auto;
+	display: flex;
+
+	// background: rgb(61, 61, 160);
+	&__scroll-wrapper {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+
+		padding: 2em;
+
+		// background: green;
+	}
+
+	&__item {
+		transition: all 0.3s ease;
+		&:not(:last-child) {
+			margin-right: 1em;
+		}
+
+		&:hover {
+			background: rgba($white, 0.2);
+			margin: 0 2em 0 1em;
+			transform: scale(1.05);
+		}
+	}
+}
